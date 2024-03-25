@@ -27,6 +27,23 @@ namespace WebApplication1.Models
                 CategoryName = "Name01",
 
             });
+
+            modelBuilder.Entity<Category>().HasData(new Category()
+            {
+                CategoryId = 5,
+                CategoryName = "Name01",
+            });
+            modelBuilder.Entity<Category>().HasData(new Category()
+            {
+                CategoryId = 6,
+                CategoryName = "Name01",
+            });
+            modelBuilder.Entity<Category>().HasData(new Category()
+            {
+                CategoryId = 7,
+                CategoryName = "Name01",
+
+            });
         }
     }
 }
