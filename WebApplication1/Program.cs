@@ -1,3 +1,6 @@
+using Microsoft.EntityFrameworkCore;
+using WebApplication1.Models;
+
 namespace WebApplication1
 {
     public class Program
@@ -8,6 +11,10 @@ namespace WebApplication1
 
             // Add services to the container.
             builder.Services.AddControllersWithViews();
+            builder.Services.AddDbContext<NorthwindContext>(options =>
+            {
+                options.UseSqlServer(builder.Configuration.GetConnectionString("NorthwindDb"));
+            });
 
             var app = builder.Build();
 
